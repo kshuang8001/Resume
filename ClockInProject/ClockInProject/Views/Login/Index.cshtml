@@ -1,0 +1,173 @@
+﻿@model ClockInProject.ViewModels.LoginIndexView
+
+@{
+    Layout = "../Shared/_LayoutLogin.cshtml";
+    Page.Title = "登入";
+}
+
+
+<script src="~/Views/Login/Index.js"></script>
+<script>
+        $('#login-form-link').addClass('active');
+
+
+        function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
+            if (response.status === 'connected') {   // Logged into your webpage and Facebook.
+                GetProfile();
+            } else {                                 // Not logged into your webpage or we are unable to tell.
+                document.getElementById('status').innerHTML = 'Please log ' +
+                    'into this webpage.';
+            }
+        }
+
+
+        function checkLoginState() {               // Called when a person is finished with the Login Button.
+            FB.getLoginStatus(function (response) {   // See the onlogin handler
+                statusChangeCallback(response);
+                if (response.status === 'connected') {
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+        }
+
+
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '1682706558590473',
+                cookie: true,                     // Enable cookies to allow the server to access the session.
+                xfbml: true,                     // Parse social plugins on this webpage.
+                version: 'v12.0'           // Use this Graph API version for this call.
+            });
+
+
+            //FB.getLoginStatus(function (response) {   // Called after the JS SDK has been initialized.
+                        // Returns the login status.
+                @*if (response.status === 'connected') {
+                    window.location.href = "@Url.Action("Index", "Home")"
+                }*@
+            //});
+        };
+
+
+        function GetProfile() {
+            document.getElementById('status').innerHTML = "";//先清空顯示結果
+
+            //FB.api()使用說明：https://developers.facebook.com/docs/javascript/reference/FB.api
+            //取得用戶個資
+            FB.api("/me", "GET", { fields: 'name,email' }, function (user) {
+                //user物件的欄位：https://developers.facebook.com/docs/graph-api/reference/user
+                if (user.error) {
+                    console.log(response);
+                } else {
+
+                    const myJSON = JSON.stringify(user);
+                    let obj = JSON.parse(myJSON);
+                    //localStorage.setItem("testJSON", myJSON);
+
+                    //// Retrieving data:
+                    //let text = localStorage.getItem("testJSON");
+                    //let obj = JSON.parse(text);
+                    //document.getElementById('status').innerHTML = obj.email;
+
+                    let loginView = { Email: obj.email, Password: "", UserName: obj.name, Type: 1 };
+
+                    $.post("@Url.Action("Index","Login")", { loginView: loginView, Remember: 1 }, function (data){
+                        window.location.href = "@Url.Action("Index", "Home")";
+                    })
+                        @*let promise =
+                        $.ajax({
+                            url: "@Url.Action("Index","Login")",
+                            method: "post",
+                            contentType: 'application/json',
+                            data: JSON.stringify({ loginView: loginView, Remember: 1 }),
+                            @*success: function (Data) {
+                                if (Data.Msg == 'Success')
+                                    window.location.href= "@Url.Action("Index", "Home")"
+                            }
+                        });*@
+
+                    @*promise.done(function (data)
+                    {
+                        //顯示Server端回傳的資料
+                        window.location.href= "@Url.Action("Index", "Home")"
+                    });*@
+                }
+            });
+
+        }
+
+    //    function logout() {
+    //        FB.logout(function (response) {
+
+    //        });
+    //} 
+        
+</script> 
+<div class="panel-body">
+    <div class="row">
+        <div class="col-lg-12">
+            @using (Html.BeginForm("Index", "Login", FormMethod.Post, new { @id = "login-form", style = "display: block;" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="form-group">
+                    @Html.TextBoxFor(model => model.UserID, new { @class = "form-control", name = "UserID", placeholder = "帳號", tabindex = "1", value = "" })
+                    @Html.ValidationMessageFor(model => model.UserID, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    @Html.PasswordFor(model => model.Password, new { name = "Password", @class = "form-control", tabindex = "2", placeholder = "密碼", value = "" })
+                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <input type="checkbox" tabindex="3" class="" name="Remember" id="Remember" value="">
+                            <label for="remember"> 保持登入</label>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="text-right">
+                                <a href="@Url.Action("ForgotPassword","Login")" tabindex="4" class="forgot-password">忘記密碼</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3">
+                            <input type="submit" name="login-submit" id="login-submit" tabindex="5" class="form-control btn btn-login" value="登入">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" style="color:#ff0000">
+                    @Html.ValidationSummary()
+                </div>
+                 
+                <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+                </fb:login-button>
+
+                <div id="status">
+                </div>
+
+                <!-- Load the JS SDK asynchronously -->
+                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+                @*<div id="auth-status">
+                <div id="auth-loggedout">
+                    <div class="fb-login-button" autologoutlink="true" scope="email">Login with Facebook</div>
+                </div>
+                <div id="auth-loggedin" style="display: none">
+                    Hi, <span id="auth-displayname"></span>(<a href="#" id="auth-logoutlink">logout</a>)
+                </div>
+            </div>*@
+            }
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+

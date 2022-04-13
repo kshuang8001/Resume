@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <link href="~/Views/Shared/_LayoutLogin.css" rel="stylesheet" />
+    <title>KS打卡系統| @Page.Title</title>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="panel panel-login">
+                    <div class="row">
+                        <div class="text-center">
+                            <img src="~/Images/logo.png" style="width:25%" />
+                            </div>
+                        </div>
+                        <div id="LoginOrRegister" class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <a href="@Url.Action("Index", "Login")" id="login-form-link">登入</a>
+                                </div>
+                                <div class="col-xs-6">
+                                    <a href="@Url.Action("Register", "Login")" id="register-form-link">註冊</a>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        @RenderBody()
+                    </div>
+                </div>
+        </div>
+    </div>
+</body>
+</html>

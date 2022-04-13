@@ -1,0 +1,11 @@
+﻿@{
+    Layout = null;
+}
+
+@if (ViewData["EmailValidate"] != null)
+{
+    <script>
+        alert('@ViewData["EmailValidate"]');
+        window.location.href = "@Url.Action("Index", "Home")";
+    </script>
+}

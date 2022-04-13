@@ -1,0 +1,7 @@
+D:\打卡專案\CalendarService\bin\CalendarService.dll.config
+D:\打卡專案\CalendarService\bin\CalendarService.dll
+D:\打卡專案\CalendarService\bin\CalendarService.pdb
+D:\打卡專案\CalendarService\obj\Debug\CalendarService.csproj.CoreCompileInputs.cache
+D:\打卡專案\CalendarService\obj\Debug\CalendarService.dll
+D:\打卡專案\CalendarService\obj\Debug\CalendarService.pdb
+D:\打卡專案\CalendarService\obj\Debug\CalendarService.csprojAssemblyReference.cache

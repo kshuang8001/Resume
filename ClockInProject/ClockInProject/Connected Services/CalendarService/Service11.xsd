@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CalendarService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CalendarService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfOrdOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrdOrder" nillable="true" type="tns:OrdOrder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrdOrder" nillable="true" type="tns:ArrayOfOrdOrder" />
+  <xs:complexType name="OrdOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CalDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Msg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MsgTitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrdOrder" nillable="true" type="tns:OrdOrder" />
+</xs:schema>

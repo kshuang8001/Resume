@@ -1,0 +1,11 @@
+﻿@{ 
+    Layout = null;
+}
+
+@if (TempData["RegisterState"] != null)
+{
+    <script>
+        alert('@TempData["RegisterState"]');
+        window.location.href = "@Url.Action("Index", "Home")";
+    </script>
+}

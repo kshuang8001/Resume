@@ -1,0 +1,65 @@
+﻿@model ClockInProject.ViewModels.LoginRegisterView
+
+
+@{
+    Layout = "../Shared/_LayoutLogin.cshtml";
+    Page.Title = "註冊";
+}
+
+<script>
+    $('#register-form-link').addClass('active');
+</script>
+
+<div class="panel-body">
+    <div class="row">
+        <div class="col-lg-12">
+                            
+            @using (Html.BeginForm("Register", "Login", FormMethod.Post, new { @id = "register-form", style = "display: block;" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="form-group">
+                    @Html.TextBoxFor(model => model.sysUserTable.UserID, new { @class = "form-control", name = "UserID", placeholder = "帳號", tabindex = "1", value = "" })
+                    @Html.ValidationMessageFor(model => model.sysUserTable.UserID, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    @Html.TextBoxFor(model => model.sysUserTable.UserName, new { @class = "form-control", name = "UserName", placeholder = "名稱", tabindex = "2", value = "" })
+                    @Html.ValidationMessageFor(model => model.sysUserTable.UserName, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    @Html.TextBoxFor(model => model.sysUserTable.Email, new { @class = "form-control", name = "Email", placeholder = "Email", tabindex = "3", value = "" })
+                    @Html.ValidationMessageFor(model => model.sysUserTable.Email, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    @Html.PasswordFor(model => model.Password, new { name = "Password", @class = "form-control", tabindex = "4", placeholder = "密碼", value = "" })
+                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    @Html.PasswordFor(model => model.PasswordCheck, new { name = "PasswordCheck", @class = "form-control", tabindex = "5", placeholder = "再次輸入密碼", value = "" })
+                    @Html.ValidationMessageFor(model => model.PasswordCheck, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group" style="color:#ff0000">
+                    @Html.ValidationSummary()
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3">
+                            <input type="submit" name="register-submit" id="register-submit" tabindex="6" class="form-control btn btn-register" value="註冊">
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+@*  1. .js & .css 放在Content & Scripts資料夾，可套用以下方法
+    <link href="~/Content/Index.css" rel="stylesheet" />
+    <script src="~/Scripts/Index.js"></script>*@
+@*  2.要在View直接用相對應.js&.css要在Views底下Web.config 修改相對應code
+    第2種方法不建議    
+*@
+
+
+
+
