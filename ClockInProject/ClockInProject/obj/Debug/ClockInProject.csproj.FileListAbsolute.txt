@@ -162,3 +162,10 @@ D:\打卡專案\ClockInProject\ClockInProject\obj\Debug\ClockInProject.csproj.Co
 D:\打卡專案\ClockInProject\ClockInProject\obj\Debug\ClockInProject.csproj.CopyComplete
 D:\打卡專案\ClockInProject\ClockInProject\obj\Debug\ClockInProject.dll
 D:\打卡專案\ClockInProject\ClockInProject\obj\Debug\ClockInProject.pdb
+D:\打卡專案\ClockInProject\ClockInProject\bin\NPOI.dll
+D:\打卡專案\ClockInProject\ClockInProject\bin\NPOI.OOXML.dll
+D:\打卡專案\ClockInProject\ClockInProject\bin\NPOI.OpenXml4Net.dll
+D:\打卡專案\ClockInProject\ClockInProject\bin\NPOI.OpenXmlFormats.dll
+D:\打卡專案\ClockInProject\ClockInProject\bin\ICSharpCode.SharpZipLib.dll
+D:\打卡專案\ClockInProject\ClockInProject\bin\PagedList.Mvc.dll
+D:\打卡專案\ClockInProject\ClockInProject\bin\PagedList.Mvc.xml

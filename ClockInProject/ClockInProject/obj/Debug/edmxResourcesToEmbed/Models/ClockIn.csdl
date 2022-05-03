@@ -15,5 +15,29 @@
   </EntityType>
   <EntityContainer Name="ClockIn_Entity" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="SysUserTable" EntityType="Self.SysUserTable" />
+    <EntitySet Name="Depart" EntityType="ClockInModel.Depart" />
   </EntityContainer>
+  <EntityType Name="Depart">
+    <Key>
+      <PropertyRef Name="DepartID" />
+    </Key>
+    <Property Name="DepartID" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="DepartName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DepartNameEn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmplID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="TelNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Male" Type="Int16" />
+    <Property Name="Female" Type="Int16" />
+    <Property Name="JobSchID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Explain" Type="String" MaxLength="68" FixedLength="false" Unicode="true" />
+    <Property Name="Memo" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="UdefT1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="UdefT2" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="UdefT3" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="UdefD1" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="UdefD2" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="UdefN1" Type="Decimal" Precision="24" Scale="9" />
+    <Property Name="UdefN2" Type="Decimal" Precision="24" Scale="9" />
+    <Property Name="AppxPath" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

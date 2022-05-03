@@ -1,0 +1,95 @@
+﻿@using System.Data
+@using ClockInProject.Helpers
+@model ClockInProject.ViewModels.ExcelIndexView
+
+@{
+    Layout = "../Shared/_Layout.cshtml";
+    ViewBag.Title = "Excel匯出匯入";
+}
+
+<script type="text/javascript">
+
+    function RdnImport_Click() {
+        document.getElementById("divImport").style.display = "block";
+        document.getElementById("divExport").style.display = "none";
+    }
+
+    function RdnExport_Click() {
+        document.getElementById("divImport").style.display = "none";
+        document.getElementById("divExport").style.display = "block";
+    }
+
+
+</script>
+
+@using (Html.BeginForm("Index", "Excel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="panel panel-default ">
+        <div class="panel-heading">選擇</div>
+        <div class="panel-body">
+            <div class="row">
+                <!-- Content Column -->
+                <div class="col-md-6">
+                    <!-- Color System -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card bg-primary text-white shadow">
+                                <div class="card-body">
+                                    @Html.RadioButtonFor(m => m.RdnList1, "Import", new { @id = "Rdn1", @onclick = "RdnImport_Click()" })
+                                    匯入
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card bg-success text-white shadow">
+                                <div class="card-body">
+                                    @Html.RadioButtonFor(m => m.RdnList1, "Export", new { @id = "Rdn2", @onclick = "RdnExport_Click()" })
+                                    匯出
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div class="panel panel-default ">
+        <div class="panel-heading">資料表</div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6"> 
+                            @Html.DropDownList("DrpTableName", (IEnumerable<SelectListItem>)ViewBag.TableItems, new { @style = "background-color:yellow" })
+                            <input type="submit" class="btn btn-success" value="確認">
+                        </div>
+                        <div class="col-md-6">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    if (Model != null)
+    {
+        if (Model.RdnList1 == "Import")
+        {
+            <script>
+                RdnImport_Click();
+            </script>
+        }
+    }
+
+
+
+    @*<div class="form-group" style="color:#ff0000">
+            @Html.ValidationSummary()
+        </div>*@
+
+}
+

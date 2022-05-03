@@ -15,5 +15,29 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Depart">
+      <EntityTypeMapping TypeName="ClockInModel.Depart">
+        <MappingFragment StoreEntitySet="Depart">
+          <ScalarProperty Name="AppxPath" ColumnName="AppxPath" />
+          <ScalarProperty Name="UdefN2" ColumnName="UdefN2" />
+          <ScalarProperty Name="UdefN1" ColumnName="UdefN1" />
+          <ScalarProperty Name="UdefD2" ColumnName="UdefD2" />
+          <ScalarProperty Name="UdefD1" ColumnName="UdefD1" />
+          <ScalarProperty Name="UdefT3" ColumnName="UdefT3" />
+          <ScalarProperty Name="UdefT2" ColumnName="UdefT2" />
+          <ScalarProperty Name="UdefT1" ColumnName="UdefT1" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="Explain" ColumnName="Explain" />
+          <ScalarProperty Name="JobSchID" ColumnName="JobSchID" />
+          <ScalarProperty Name="Female" ColumnName="Female" />
+          <ScalarProperty Name="Male" ColumnName="Male" />
+          <ScalarProperty Name="TelNo" ColumnName="TelNo" />
+          <ScalarProperty Name="EmplID" ColumnName="EmplID" />
+          <ScalarProperty Name="DepartNameEn" ColumnName="DepartNameEn" />
+          <ScalarProperty Name="DepartName" ColumnName="DepartName" />
+          <ScalarProperty Name="DepartID" ColumnName="DepartID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

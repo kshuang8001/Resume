@@ -26,5 +26,6 @@ namespace ClockInProject.Models
         }
     
         public virtual DbSet<SysUserTable> SysUserTable { get; set; }
+        public virtual DbSet<Depart> Depart { get; set; }
     }
 }

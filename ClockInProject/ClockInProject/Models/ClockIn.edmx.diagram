@@ -6,6 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="dfcb16792ddf49af92d559f04c43ff0c" Name="Diagram1">
         <EntityTypeShape EntityType="ClockInModel.SysUserTable" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClockInModel.Depart" Width="1.5" PointX="3.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -5,6 +5,29 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="ClockInModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Depart">
+          <Key>
+            <PropertyRef Name="DepartID" />
+          </Key>
+          <Property Name="DepartID" Type="nvarchar" MaxLength="12" Nullable="false" />
+          <Property Name="DepartName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DepartNameEn" Type="nvarchar" MaxLength="50" />
+          <Property Name="EmplID" Type="nvarchar" MaxLength="20" />
+          <Property Name="TelNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="Male" Type="smallint" />
+          <Property Name="Female" Type="smallint" />
+          <Property Name="JobSchID" Type="nvarchar" MaxLength="10" />
+          <Property Name="Explain" Type="nvarchar" MaxLength="68" />
+          <Property Name="Memo" Type="nvarchar" MaxLength="4000" />
+          <Property Name="UdefT1" Type="nvarchar" MaxLength="20" />
+          <Property Name="UdefT2" Type="nvarchar" MaxLength="20" />
+          <Property Name="UdefT3" Type="nvarchar" MaxLength="20" />
+          <Property Name="UdefD1" Type="nvarchar" MaxLength="8" />
+          <Property Name="UdefD2" Type="nvarchar" MaxLength="8" />
+          <Property Name="UdefN1" Type="decimal" Precision="24" Scale="9" />
+          <Property Name="UdefN2" Type="decimal" Precision="24" Scale="9" />
+          <Property Name="AppxPath" Type="nvarchar" MaxLength="4000" />
+        </EntityType>
         <EntityType Name="SysUserTable">
           <Key>
             <PropertyRef Name="UserID" />
@@ -19,6 +42,7 @@
           <Property Name="AuthCode" Type="nvarchar" MaxLength="10" />
         </EntityType>
         <EntityContainer Name="ClockInModelStoreContainer">
+          <EntitySet Name="Depart" EntityType="Self.Depart" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SysUserTable" EntityType="Self.SysUserTable" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -40,7 +64,31 @@
         </EntityType>
         <EntityContainer Name="ClockIn_Entity" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="SysUserTable" EntityType="Self.SysUserTable" />
+          <EntitySet Name="Depart" EntityType="ClockInModel.Depart" />
         </EntityContainer>
+        <EntityType Name="Depart">
+          <Key>
+            <PropertyRef Name="DepartID" />
+          </Key>
+          <Property Name="DepartID" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="DepartName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DepartNameEn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EmplID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="TelNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Male" Type="Int16" />
+          <Property Name="Female" Type="Int16" />
+          <Property Name="JobSchID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Explain" Type="String" MaxLength="68" FixedLength="false" Unicode="true" />
+          <Property Name="Memo" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="UdefT1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="UdefT2" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="UdefT3" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="UdefD1" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="UdefD2" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="UdefN1" Type="Decimal" Precision="24" Scale="9" />
+          <Property Name="UdefN2" Type="Decimal" Precision="24" Scale="9" />
+          <Property Name="AppxPath" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -58,6 +106,30 @@
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="IsStopUse" ColumnName="IsStopUse" />
                 <ScalarProperty Name="Type" ColumnName="Type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Depart">
+            <EntityTypeMapping TypeName="ClockInModel.Depart">
+              <MappingFragment StoreEntitySet="Depart">
+                <ScalarProperty Name="AppxPath" ColumnName="AppxPath" />
+                <ScalarProperty Name="UdefN2" ColumnName="UdefN2" />
+                <ScalarProperty Name="UdefN1" ColumnName="UdefN1" />
+                <ScalarProperty Name="UdefD2" ColumnName="UdefD2" />
+                <ScalarProperty Name="UdefD1" ColumnName="UdefD1" />
+                <ScalarProperty Name="UdefT3" ColumnName="UdefT3" />
+                <ScalarProperty Name="UdefT2" ColumnName="UdefT2" />
+                <ScalarProperty Name="UdefT1" ColumnName="UdefT1" />
+                <ScalarProperty Name="Memo" ColumnName="Memo" />
+                <ScalarProperty Name="Explain" ColumnName="Explain" />
+                <ScalarProperty Name="JobSchID" ColumnName="JobSchID" />
+                <ScalarProperty Name="Female" ColumnName="Female" />
+                <ScalarProperty Name="Male" ColumnName="Male" />
+                <ScalarProperty Name="TelNo" ColumnName="TelNo" />
+                <ScalarProperty Name="EmplID" ColumnName="EmplID" />
+                <ScalarProperty Name="DepartNameEn" ColumnName="DepartNameEn" />
+                <ScalarProperty Name="DepartName" ColumnName="DepartName" />
+                <ScalarProperty Name="DepartID" ColumnName="DepartID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

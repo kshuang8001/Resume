@@ -1,0 +1,43 @@
+﻿@model ClockInProject.ViewModels.StockIndexView
+
+@{
+    Layout = null;
+}
+
+@{
+    if (Model == null)
+    { return; }
+}
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">瀏覽結果</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>代號</th>
+                        <th>公司名稱</th>
+                        <th>本益比</th>
+                        <th>殖利率</th>
+                        <th>股價淨值率</th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>@Model.Code</td>
+                        <td>@Model.Name</td>
+                        <td>@Model.PEratio</td>
+                        <td>@Model.DividendYield</td>
+                        <td>@Model.PBratio</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+ 
+
+

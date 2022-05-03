@@ -1,5 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="ClockInModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Depart">
+    <Key>
+      <PropertyRef Name="DepartID" />
+    </Key>
+    <Property Name="DepartID" Type="nvarchar" MaxLength="12" Nullable="false" />
+    <Property Name="DepartName" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="DepartNameEn" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmplID" Type="nvarchar" MaxLength="20" />
+    <Property Name="TelNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="Male" Type="smallint" />
+    <Property Name="Female" Type="smallint" />
+    <Property Name="JobSchID" Type="nvarchar" MaxLength="10" />
+    <Property Name="Explain" Type="nvarchar" MaxLength="68" />
+    <Property Name="Memo" Type="nvarchar" MaxLength="4000" />
+    <Property Name="UdefT1" Type="nvarchar" MaxLength="20" />
+    <Property Name="UdefT2" Type="nvarchar" MaxLength="20" />
+    <Property Name="UdefT3" Type="nvarchar" MaxLength="20" />
+    <Property Name="UdefD1" Type="nvarchar" MaxLength="8" />
+    <Property Name="UdefD2" Type="nvarchar" MaxLength="8" />
+    <Property Name="UdefN1" Type="decimal" Precision="24" Scale="9" />
+    <Property Name="UdefN2" Type="decimal" Precision="24" Scale="9" />
+    <Property Name="AppxPath" Type="nvarchar" MaxLength="4000" />
+  </EntityType>
   <EntityType Name="SysUserTable">
     <Key>
       <PropertyRef Name="UserID" />
@@ -14,6 +37,7 @@
     <Property Name="AuthCode" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <EntityContainer Name="ClockInModelStoreContainer">
+    <EntitySet Name="Depart" EntityType="Self.Depart" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SysUserTable" EntityType="Self.SysUserTable" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

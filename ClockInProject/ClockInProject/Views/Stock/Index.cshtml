@@ -1,0 +1,47 @@
+﻿@model ClockInProject.ViewModels.StockIndexView
+@using ClockInProject.Helpers
+@using ClockInProject.Models
+@{
+    Layout = "../Shared/_Layout.cshtml";
+    ViewBag.Title = "股票資訊";
+}
+
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+ 
+@using (Ajax.BeginForm("Index", "Stock", new AjaxOptions { HttpMethod = "Post", UpdateTargetId = "tb", InsertionMode = InsertionMode.Replace }))
+{
+    @Html.AntiForgeryToken()
+
+<div class="panel panel-default ">
+    <div class="panel-heading">瀏覽條件</div>
+    <div class="panel-body">
+        <div class="row">
+            <!-- Content Column -->
+            <div class="col-lg-6 mb-4">
+                @Html.TextBoxFor(model => model.Code, new { @class = "bg-light", aria_label = "Search", aria_describedby = "basic-addon2", name = "Code", placeholder = "股票代號", tabindex = "1", value = "" })
+                @Html.ValidationMessageFor(model => model.Code, "", new { @class = "text-danger" })
+
+
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-search fa-sm"></i>
+                </button>
+
+
+            </div>
+        </div>
+    </div>
+</div>  
+    <div class="form-group" style="color:#ff0000">
+        @Html.ValidationSummary()
+    </div>
+
+}
+
+
+
+
+<div id="tb">
+
+
+</div>
+
