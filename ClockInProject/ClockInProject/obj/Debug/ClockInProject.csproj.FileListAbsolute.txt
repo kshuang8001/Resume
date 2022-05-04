@@ -169,3 +169,5 @@ D:\打卡專案\ClockInProject\ClockInProject\bin\NPOI.OpenXmlFormats.dll
 D:\打卡專案\ClockInProject\ClockInProject\bin\ICSharpCode.SharpZipLib.dll
 D:\打卡專案\ClockInProject\ClockInProject\bin\PagedList.Mvc.dll
 D:\打卡專案\ClockInProject\ClockInProject\bin\PagedList.Mvc.xml
+D:\打卡專案\ClockInProject\ClockInProject\bin\PagedList.dll
+D:\打卡專案\ClockInProject\ClockInProject\bin\PagedList.xml

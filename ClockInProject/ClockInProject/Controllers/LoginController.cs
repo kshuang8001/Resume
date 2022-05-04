@@ -106,7 +106,7 @@ namespace ClockInProject.Controllers
                 string StrTempMail = System.IO.File.ReadAllText(Server.MapPath("~/Views/Shared/RegisterEmail.html"));
                 UriBuilder ValidateUrl = new UriBuilder(Request.Url) { Path = Url.Action("EmailValidate", "Login", new { UserID = loginRegisterView.sysUserTable.UserID, Username = loginRegisterView.sysUserTable.UserName, AuthCode = StrAuthCode }) };
                 string StrMailBody = mailService.GetRegisterMailBody(StrTempMail, loginRegisterView.sysUserTable.UserName, ValidateUrl.ToString().Replace("%3F", "?"));
-                mailService.SendMail(StrMailBody, loginRegisterView.sysUserTable.Email, "KS打卡系統| 註冊驗證信");
+                mailService.SendMail(StrMailBody, loginRegisterView.sysUserTable.Email, "KS系統| 註冊驗證信");
                 TempData["RegisterState"] = "註冊成功，已發送驗證信到Email信箱。";
                 return RedirectToAction("RegisterResult");
             }
@@ -137,7 +137,7 @@ namespace ClockInProject.Controllers
                 string StrTempMail = System.IO.File.ReadAllText(Server.MapPath("~/Views/Shared/ForgotPasswordEmail.html"));
                 //UriBuilder ValidateUrl = new UriBuilder(Request.Url) { Path = Url.Action("EmailValidate", "Login", new { UserID = loginRegisterView.sysUserTable.UserID, Username = loginRegisterView.sysUserTable.UserName, AuthCode = StrAuthCode }) };
                 string StrMailBody = mailService.GetForgotPasswordMailBody(StrTempMail, StrRandomPassword);
-                mailService.SendMail(StrMailBody, sysUserTable.Email, "KS打卡系統| 新密碼通知");
+                mailService.SendMail(StrMailBody, sysUserTable.Email, "KS系統| 新密碼通知");
                 TempData["ForgotState"] = "已將密碼發送到註冊Email信箱。";
 
                 return RedirectToAction("ForgotPasswordResult");

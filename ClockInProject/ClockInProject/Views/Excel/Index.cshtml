@@ -1,5 +1,7 @@
 ﻿@using System.Data
 @using ClockInProject.Helpers
+@using PagedList.Mvc;
+@using PagedList;
 @model ClockInProject.ViewModels.ExcelIndexView
 
 @{
@@ -21,6 +23,7 @@
 
 
 </script>
+ 
 
 @using (Html.BeginForm("Index", "Excel", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
@@ -55,14 +58,14 @@
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
     <div class="panel panel-default ">
         <div class="panel-heading">資料表</div>
         <div class="panel-body">
             <div class="row">
                 <div class="col-md-6">
                     <div class="row">
-                        <div class="col-md-6"> 
+                        <div class="col-md-6">
                             @Html.DropDownList("DrpTableName", (IEnumerable<SelectListItem>)ViewBag.TableItems, new { @style = "background-color:yellow" })
                             <input type="submit" class="btn btn-success" value="確認">
                         </div>
@@ -71,6 +74,41 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default ">
+        <div class="panel-heading">結果資料</div>
+        <div class="panel-body">
+            <div class="row">
+                @if (Model != null)
+                {
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    @foreach (DataColumn dc in Model.dataTable.Columns)
+                                    {
+                                        <th scope="col">@dc.ColumnName</th> 
+                                    }
+                                </tr>
+                            </thead>
+                            @foreach (DataRow dr in Model.LstDr)
+                            {
+                                <tr>
+                                    @foreach (DataColumn dc in Model.dataTable.Columns)
+                                    {
+
+                                        <td>
+                                            @dr[dc.ColumnName].ToString()
+                                        </td>
+                                    }
+                                </tr>
+                            }
+                        </table>
+                    </div>
+                    @Html.PagedListPager((IPagedList)Model.PagLstDr, x => Url.Action("Index", new { page = x }))
+                }
             </div>
         </div>
     </div>

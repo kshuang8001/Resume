@@ -11,9 +11,9 @@ namespace ClockInProject.Service
 
     public class MailService
     {
-        private string gmail_account = "498g0005@stust.edu.tw";
+        private string gmail_account = "54yhgfgnbc@gmail.com";
         private string gmail_password = "dszd1234";
-        private string gmail_mail = "498g0005@stust.edu.tw";
+        private string gmail_mail = "54yhgfgnbc@gmail.com";
 
         public string GetValidateCode()
         {

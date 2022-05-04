@@ -23,11 +23,36 @@ namespace ClockInProject.ViewModels
         [Required(ErrorMessage ="請選擇匯出/匯入")]
         public string RdnList1 { get; set; }
 
-        public int Page { get; set; }
+        private int IntPage = 0;
+        public int Page {
+            get
+            {
+                if (IntPage == 0)
+                    IntPage = 1;
 
-        public int PageSize { get; set; }
+                return IntPage; 
+            }
+            set
+            {
+                IntPage = value;
+            }
+        }
 
+        private int IntPageSize = 0;
+        public int PageSize {
+            get {
+                if (IntPageSize == 0)
+                    IntPageSize = 10;
 
+                return IntPageSize;
+            }
+            set {
+                IntPageSize = value;
+            }
+        }
+
+        public List<DataRow> LstDr { get; set; }//Regular list to hold data from Datatable
+        public PagedList<DataRow> PagLstDr { get; set; }
 
     }
 }
