@@ -86,7 +86,8 @@
 	<ul>
 	<li>使用映射（reflection）取得Entity Framework資料表名稱</li>
 	<li>使用TSQL 回寫資料表</li>
-	<li>使用NPOI讀寫EXCEL</li>
+	<li>使用套件NPOI讀寫EXCEL</li>
+	<li>使用套件Pagedlist做Grid分頁</li>
 	</ul>
 
 
