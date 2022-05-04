@@ -24,13 +24,12 @@ namespace ClockInProject.Service
         SqlConnection Conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ClockInConnectionString"].ConnectionString);
         SqlDataAdapter adp = new SqlDataAdapter();
         SqlCommand cmd = new SqlCommand();
-        Dictionary<string, Type> tableTypeDict;
          
         
 
         private DataTable QuerySql(string sql)
         {
-
+            cmd = new SqlCommand();
             cmd.Connection = Conn;
             cmd.CommandText = sql;
             adp.SelectCommand = cmd;
@@ -41,12 +40,15 @@ namespace ClockInProject.Service
             return ds.Tables[0];
         }
 
-        private void ExcuteSql(string sql)
+        private void ExcuteSql(string sql, List<object> LstObj)
         {
-
+            cmd = new SqlCommand();
             cmd.Connection = Conn;
             Conn.Open();
             cmd.CommandText = sql;
+            for (int i = 0; i < LstObj.Count(); i++) 
+                cmd.Parameters.AddWithValue("@Parameter" + i, LstObj[i]);
+
             cmd.ExecuteNonQuery();
             Conn.Close();
             //return ds.Tables[0];
@@ -181,7 +183,7 @@ namespace ClockInProject.Service
         }
         public void UpdateToDatabase(DataTable dataTable)
         {
-             
+            
             string StrSQL = "SELECT name FROM sys.columns WHERE " +
                             "(object_id = (SELECT T1.object_id FROM sys.tables AS T1 WHERE (T1.name = '" + dataTable.TableName + "')))" +
                             "AND(column_id IN(SELECT T2.column_id FROM sys.index_columns AS T2," +
@@ -212,20 +214,42 @@ namespace ClockInProject.Service
                     sbInsertColumns.Append(dc.ColumnName + ", ");
                 sbInsertColumns.Remove(sbInsertColumns.Length - 2, 2);
 
+                List<object> LstObj = new List<object>();
+
                 // 取的當前列要處理的欄位值有哪些(INSERT).
+                //StringBuilder sbInsertValues = new StringBuilder();
+                //foreach (DataColumn dc in dataTable.Columns)
+                //    sbInsertValues.Append("N'" + dr[dc.ColumnName].ToString() + "', ");
+                //sbInsertValues.Remove(sbInsertValues.Length - 2, 2);
+
                 StringBuilder sbInsertValues = new StringBuilder();
                 foreach (DataColumn dc in dataTable.Columns)
-                    sbInsertValues.Append("N'" + dr[dc.ColumnName].ToString() + "', ");
+                {
+                    sbInsertValues.Append("@Parameter" + LstObj.Count + ", ");
+                    LstObj.Add(dr[dc.ColumnName].ToString());
+                }
                 sbInsertValues.Remove(sbInsertValues.Length - 2, 2);
 
                 // 取的當前列要處理的欄位與欄位值有哪些(UPDATE).
+                //StringBuilder sbUpdateTable = new StringBuilder();
+                //foreach (DataColumn dc in dataTable.Columns)
+                //{
+                //    if (!DtPrimary.Columns.Contains(dc.ColumnName))
+                //    { 
+
+                //        sbUpdateTable.Append(dc + " = N'" + dr[dc] + "'" + ", ");
+                //    }
+                //}
+                //sbUpdateTable.Remove(sbUpdateTable.Length - 2, 2);
+
                 StringBuilder sbUpdateTable = new StringBuilder();
                 foreach (DataColumn dc in dataTable.Columns)
                 {
                     if (!DtPrimary.Columns.Contains(dc.ColumnName))
-                    { 
+                    {
 
-                        sbUpdateTable.Append(dc + " = N'" + dr[dc] + "'" + ", ");
+                        sbUpdateTable.Append(dc + " = @Parameter" + LstObj.Count() + ", ");
+                        LstObj.Add(dr[dc.ColumnName].ToString());
                     }
                 }
                 sbUpdateTable.Remove(sbUpdateTable.Length - 2, 2);
@@ -236,7 +260,7 @@ namespace ClockInProject.Service
                 sbSqlString.Append("ELSE" + Environment.NewLine);
                 sbSqlString.Append("    UPDATE " + dataTable.TableName + " SET " + sbUpdateTable + " WHERE " + sbWhere + "; " + Environment.NewLine);
 
-                ExcuteSql(sbSqlString.ToString());
+                ExcuteSql(sbSqlString.ToString(), LstObj);
             }
         }
 
