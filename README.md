@@ -82,6 +82,7 @@
 	Excel匯入/匯出
 	</h1>
 	<img src="/Img/Img_05.png" width="500" height="300" style="max-width: 100%;">
+	<img src="/Img/Img_06.png" width="500" height="300" style="max-width: 100%;">
 	<ul>
 	<li>使用映射（reflection）取得Entity Framework資料表名稱</li>
 	<li>使用TSQL 回寫資料表</li>
