@@ -89,7 +89,14 @@
 	<li>使用套件NPOI讀寫EXCEL</li>
 	<li>使用套件Pagedlist做Grid分頁</li>
 	</ul>
-
-
+<hr>
+<h1 dir="auto">
+預計撰寫功能
+</h1>
+<ul>
+	<li>首頁備忘錄撰寫</li>
+	<li>Site Map功能</li>
+	<li>手機網頁排版</li>
+</ul>
 
 
