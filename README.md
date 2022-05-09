@@ -95,7 +95,7 @@
 </h1>
 <ul>
 	<li>首頁備忘錄撰寫</li>
-	<li>Site Map功能</li>
+	<li><del>Site Map功能</del></li>
 	<li>手機網頁排版</li>
 </ul>
 
