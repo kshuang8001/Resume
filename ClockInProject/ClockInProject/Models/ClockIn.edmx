@@ -28,6 +28,17 @@
           <Property Name="UdefN2" Type="decimal" Precision="24" Scale="9" />
           <Property Name="AppxPath" Type="nvarchar" MaxLength="4000" />
         </EntityType>
+        <EntityType Name="SysUserCalendar">
+          <Key>
+            <PropertyRef Name="AutoNo" />
+          </Key>
+          <Property Name="AutoNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserID" Type="nvarchar" MaxLength="20" />
+          <Property Name="CalDate" Type="nvarchar" MaxLength="8" />
+          <Property Name="Msg" Type="nvarchar" MaxLength="4000" />
+          <Property Name="MsgTitle" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsFinish" Type="bit" Nullable="false" />
+        </EntityType>
         <EntityType Name="SysUserTable">
           <Key>
             <PropertyRef Name="UserID" />
@@ -43,6 +54,7 @@
         </EntityType>
         <EntityContainer Name="ClockInModelStoreContainer">
           <EntitySet Name="Depart" EntityType="Self.Depart" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SysUserCalendar" EntityType="Self.SysUserCalendar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SysUserTable" EntityType="Self.SysUserTable" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -65,6 +77,7 @@
         <EntityContainer Name="ClockIn_Entity" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="SysUserTable" EntityType="Self.SysUserTable" />
           <EntitySet Name="Depart" EntityType="ClockInModel.Depart" />
+          <EntitySet Name="SysUserCalendar" EntityType="ClockInModel.SysUserCalendar" />
         </EntityContainer>
         <EntityType Name="Depart">
           <Key>
@@ -88,6 +101,17 @@
           <Property Name="UdefN1" Type="Decimal" Precision="24" Scale="9" />
           <Property Name="UdefN2" Type="Decimal" Precision="24" Scale="9" />
           <Property Name="AppxPath" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SysUserCalendar">
+          <Key>
+            <PropertyRef Name="AutoNo" />
+          </Key>
+          <Property Name="AutoNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CalDate" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="Msg" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="MsgTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsFinish" Type="Boolean" Nullable="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -130,6 +154,18 @@
                 <ScalarProperty Name="DepartNameEn" ColumnName="DepartNameEn" />
                 <ScalarProperty Name="DepartName" ColumnName="DepartName" />
                 <ScalarProperty Name="DepartID" ColumnName="DepartID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SysUserCalendar">
+            <EntityTypeMapping TypeName="ClockInModel.SysUserCalendar">
+              <MappingFragment StoreEntitySet="SysUserCalendar">
+                <ScalarProperty Name="IsFinish" ColumnName="IsFinish" />
+                <ScalarProperty Name="MsgTitle" ColumnName="MsgTitle" />
+                <ScalarProperty Name="Msg" ColumnName="Msg" />
+                <ScalarProperty Name="CalDate" ColumnName="CalDate" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="AutoNo" ColumnName="AutoNo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

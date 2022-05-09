@@ -171,3 +171,5 @@ D:\打卡專案\ClockInProject\ClockInProject\bin\PagedList.Mvc.dll
 D:\打卡專案\ClockInProject\ClockInProject\bin\PagedList.Mvc.xml
 D:\打卡專案\ClockInProject\ClockInProject\bin\PagedList.dll
 D:\打卡專案\ClockInProject\ClockInProject\bin\PagedList.xml
+D:\打卡專案\ClockInProject\ClockInProject\bin\MvcSiteMapProvider.dll
+D:\打卡專案\ClockInProject\ClockInProject\bin\MvcSiteMapProvider.xml

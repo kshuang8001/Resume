@@ -1,0 +1,61 @@
+﻿@using ClockInProject.Models
+@using PagedList.Mvc;
+@using PagedList;
+@model IEnumerable<ClockInProject.Models.SysUserCalendar>
+
+@{
+                
+    Layout = "../Shared/_Layout.cshtml";
+    ViewBag.Title = "行事曆";
+}
+
+@using (Html.BeginForm("Index", "Calendar", FormMethod.Post, new { }))
+{
+<div class="row">
+    <div class="col-md-11">
+        <div class="form-group">
+            日期:
+            @Html.TextBox("CalDate_Start", DateTime.Now.ToShortDateString(), new { @class = "datefield", type = "date" })
+            ~
+            @Html.TextBox("CalDate_End", DateTime.Now.ToShortDateString(), new { @class = "datefield", type = "date" })
+            <input type="submit" class="btn btn-success" value="確認">
+        </div>
+    </div>
+    <div class="col-md-1"> 
+        @Html.ActionLink("新增", "New", null, new { @class="btn btn-info" }) 
+    </div>
+</div>
+    <div class="panel panel-default ">
+        <div class="panel-heading">結果資料</div>
+        <div class="panel-body">
+            <div class="row">
+                @if (Model != null)
+                {
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+
+                                    <th scope="col">日期</th>
+                                    <th scope="col">標題</th>
+                                    <th scope="col">內容</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            @foreach (SysUserCalendar sysUserCalendar in Model)
+                            {
+                                <tr>
+                                    <td>@sysUserCalendar.CalDate</td>
+                                    <td>@sysUserCalendar.MsgTitle</td>
+                                    <td>@sysUserCalendar.Msg</td> 
+                                    <td>@Html.ActionLink("修改", "Edit", new { AutoNo=sysUserCalendar.AutoNo}, new { @class = "btn btn-link" }) </td>
+                                </tr>
+                            }
+                        </table>
+                    </div>
+                    @Html.PagedListPager((IPagedList)Model, x => Url.Action("Index", new { page = x }))
+                }
+            </div>
+        </div>
+    </div>
+}

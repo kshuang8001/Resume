@@ -16,6 +16,7 @@
   <EntityContainer Name="ClockIn_Entity" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="SysUserTable" EntityType="Self.SysUserTable" />
     <EntitySet Name="Depart" EntityType="ClockInModel.Depart" />
+    <EntitySet Name="SysUserCalendar" EntityType="ClockInModel.SysUserCalendar" />
   </EntityContainer>
   <EntityType Name="Depart">
     <Key>
@@ -39,5 +40,16 @@
     <Property Name="UdefN1" Type="Decimal" Precision="24" Scale="9" />
     <Property Name="UdefN2" Type="Decimal" Precision="24" Scale="9" />
     <Property Name="AppxPath" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SysUserCalendar">
+    <Key>
+      <PropertyRef Name="AutoNo" />
+    </Key>
+    <Property Name="AutoNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CalDate" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="Msg" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="MsgTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsFinish" Type="Boolean" Nullable="false" />
   </EntityType>
 </Schema>

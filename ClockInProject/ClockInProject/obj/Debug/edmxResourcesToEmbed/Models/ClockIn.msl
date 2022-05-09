@@ -39,5 +39,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="SysUserCalendar">
+      <EntityTypeMapping TypeName="ClockInModel.SysUserCalendar">
+        <MappingFragment StoreEntitySet="SysUserCalendar">
+          <ScalarProperty Name="IsFinish" ColumnName="IsFinish" />
+          <ScalarProperty Name="MsgTitle" ColumnName="MsgTitle" />
+          <ScalarProperty Name="Msg" ColumnName="Msg" />
+          <ScalarProperty Name="CalDate" ColumnName="CalDate" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="AutoNo" ColumnName="AutoNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

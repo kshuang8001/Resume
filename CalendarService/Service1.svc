@@ -1,1 +1,1 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="CalendarService.Service1" CodeBehind="Service1.svc.cs" %>
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="CalendarAPI.Service1" CodeBehind="Service1.svc.cs" %>

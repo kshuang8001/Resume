@@ -8,7 +8,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClockInProject", "ClockInPr
 		{F31694DA-8758-43AA-9FD9-CBEF447B963D} = {F31694DA-8758-43AA-9FD9-CBEF447B963D}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendarService", "..\CalendarService\CalendarService.csproj", "{F31694DA-8758-43AA-9FD9-CBEF447B963D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendarAPI", "..\CalendarService\CalendarAPI.csproj", "{F31694DA-8758-43AA-9FD9-CBEF447B963D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

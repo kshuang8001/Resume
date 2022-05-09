@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="CalendarService.Global" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="CalendarAPI.Global" Language="C#" %>
