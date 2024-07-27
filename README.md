@@ -49,7 +49,7 @@
 			<td>Java</td>
 			<td></td>
 			<td></td>
-			<td></td>
+			<td>Power BI</td>
 		</tr>	
 		<tr>
 			<td>Allegro Skill</td>
