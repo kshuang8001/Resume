@@ -91,6 +91,36 @@
 	</ul>
 <hr>
 <h1 dir="auto">
+	三次元機台RTF檔轉檔寫入資料庫，自動進行提判程序
+	</h1>
+	<img src="/Img/Img_05.png" width="500" height="300" style="max-width: 100%;">
+	<img src="/Img/Img_06.png" width="500" height="300" style="max-width: 100%;">
+	<ul>
+	<li>透過Windows Service定時進行轉檔程序</li>
+	<li></li>
+	</ul>
+<hr>
+<h1 dir="auto">
+	提判系統
+	</h1>
+	<img src="/Img/Img_05.png" width="500" height="300" style="max-width: 100%;">
+	<img src="/Img/Img_06.png" width="500" height="300" style="max-width: 100%;">
+	<ul>
+	<li>透過Windows Service定時進行提判程序</li>
+	<li></li>
+	</ul>
+<hr>
+<h1 dir="auto">
+	終檢報告系統
+	</h1>
+	<img src="/Img/Img_05.png" width="500" height="300" style="max-width: 100%;">
+	<img src="/Img/Img_06.png" width="500" height="300" style="max-width: 100%;">
+	<ul>
+	<li>透過Windows Service定時進行提判程序</li>
+	<li></li>
+	</ul>
+<hr>
+<h1 dir="auto">
 預計撰寫功能
 </h1>
 <ul>
