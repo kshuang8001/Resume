@@ -97,17 +97,8 @@
 	<img src="/Img/Img_06.png" width="500" height="300" style="max-width: 100%;">
 	<ul>
 	<li>透過Windows Service定時進行轉檔程序</li>
-	<li></li>
-	</ul>
-<hr>
-<h1 dir="auto">
-	提判系統
-	</h1>
-	<img src="/Img/Img_05.png" width="500" height="300" style="max-width: 100%;">
-	<img src="/Img/Img_06.png" width="500" height="300" style="max-width: 100%;">
-	<ul>
-	<li>透過Windows Service定時進行提判程序</li>
-	<li></li>
+	<li>檢驗機台RTF檔案複製至指定路徑，透過轉檔程式定時轉</li>
+	<li>針對超公差不為0圈碼進行提判</li>
 	</ul>
 <hr>
 <h1 dir="auto">
@@ -117,7 +108,7 @@
 	<img src="/Img/Img_06.png" width="500" height="300" style="max-width: 100%;">
 	<ul>
 	<li>透過Windows Service定時進行提判程序</li>
-	<li></li>
+	<li>針對製令對應圈碼OP所量測數值，是否符合各自上下限顯示Excel報告</li>
 	</ul>
 <hr>
 <h1 dir="auto">
