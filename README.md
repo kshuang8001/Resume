@@ -60,6 +60,28 @@
 	</table>
 </ul>
 <hr>
+<h1>MES系統</h1>
+<h2 dir="auto">
+	三次元機台RTF檔轉檔寫入資料庫，自動進行提判程序
+	</h2>
+	<img src="/Img/Img_05.png" width="500" height="300" style="max-width: 100%;">
+	<img src="/Img/Img_06.png" width="500" height="300" style="max-width: 100%;">
+	<ul>
+	<li>透過Windows Service定時進行轉檔程序</li>
+	<li>檢驗機台RTF檔案複製至指定路徑，透過轉檔程式定時轉</li>
+	<li>針對超公差不為0圈碼進行提判</li>
+	</ul>
+<hr>
+<h1 dir="auto">
+	終檢報告系統
+	</h1>
+	<img src="/Img/Img_05.png" width="500" height="300" style="max-width: 100%;">
+	<img src="/Img/Img_06.png" width="500" height="300" style="max-width: 100%;">
+	<ul>
+	<li>透過Windows Service定時進行提判程序</li>
+	<li>針對製令對應圈碼OP所量測數值，是否符合各自上下限顯示Excel報告</li>
+	</ul>
+<hr>
 <h1 dir="auto">
 會員管理功能
 </h1>
@@ -88,27 +110,6 @@
 	<li>使用TSQL 回寫資料表</li>
 	<li>使用套件NPOI讀寫EXCEL</li>
 	<li>使用套件Pagedlist做Grid分頁</li>
-	</ul>
-<hr>
-<h1 dir="auto">
-	三次元機台RTF檔轉檔寫入資料庫，自動進行提判程序
-	</h1>
-	<img src="/Img/Img_05.png" width="500" height="300" style="max-width: 100%;">
-	<img src="/Img/Img_06.png" width="500" height="300" style="max-width: 100%;">
-	<ul>
-	<li>透過Windows Service定時進行轉檔程序</li>
-	<li>檢驗機台RTF檔案複製至指定路徑，透過轉檔程式定時轉</li>
-	<li>針對超公差不為0圈碼進行提判</li>
-	</ul>
-<hr>
-<h1 dir="auto">
-	終檢報告系統
-	</h1>
-	<img src="/Img/Img_05.png" width="500" height="300" style="max-width: 100%;">
-	<img src="/Img/Img_06.png" width="500" height="300" style="max-width: 100%;">
-	<ul>
-	<li>透過Windows Service定時進行提判程序</li>
-	<li>針對製令對應圈碼OP所量測數值，是否符合各自上下限顯示Excel報告</li>
 	</ul>
 <hr>
 <h1 dir="auto">
