@@ -60,33 +60,21 @@
 	</table>
 </ul>
 <hr>
-<h1>MES系統</h1>
-<h3 dir="auto">
-	1.檢驗數據提判功能
-	</h3>
-	<img src="/Img/Img_07.png" width="500" height="300" style="max-width: 100%;">
+<h1 dir="auto">
+	MES系統
+	</h1>
 	<ul>
-	<li>透過Windows Service定時進行轉檔程序</li>
-	<li>檢驗機台RTF檔案複製至指定路徑，透過轉檔程式定時轉檔</li>
-	<li>針對超公差不為0圈碼進行提判</li>
-	</ul>
-<hr>
-<h3 dir="auto">
-	2.終檢報告功能
-	</h3>
-	<img src="/Img/Img_08.png" width="500" height="300" style="max-width: 100%;">
-	<ul>
-	<li>透過Windows Service定時進行轉檔程序</li>
-	<li>針對製令對應圈碼OP所量測數值，是否符合各自上下限並顯示Excel報告</li>
+	<li>使用ASP.NET MVC 5與C#開發，前端使用Javascript、Jquery與Bootstrp 3</li>
+	<li>利用GIT做版控</li>
+	<li>透過Windows Service定時進行轉檔程式，網站只須檢視產出報告即可降低使用效能</li>
 	</ul>
 <hr>
 <h1 dir="auto">
 	KPI系統
 	</h1>
-	<img src="/Img/Img_09.png" width="500" height="300" style="max-width: 100%;">
 	<ul>
-	<li>透過Windows Service定時進行更新</li>
-	<li>透過Power BI呈現各部門KPI績效</li>
+	<li>透過Windows Service每日定時進行更新</li>
+	<li>透過Power BI呈現各部門KPI績效報表</li>
 	<li>使用者透過Google表單回報部門指標</li>
 	</ul>
 <hr>
@@ -95,14 +83,14 @@
 	</h1>
 	<img src="/Img/Img_09.png" width="500" height="300" style="max-width: 100%;">
 	<ul>
-	<li>透過Windows Service定時進行更新</li>
-	<li>透過Power BI呈現製令當前久滯狀況</li>
-	<li></li>
+	<li>透過Windows Service每日定時進行更新</li>
+	<li>透過Power BI呈現各廠區製令當前久滯狀況</li>
 	</ul>
 <hr>
-<h1 dir="auto">
-會員管理功能
+<h1 dir="auto">Side Project
+
 </h1>
+<h3>1.會員管理功能</h3>
  <img src="/Img/Img_01.png" width="500" height="300" style="max-width: 100%;">
  <img src="/Img/Img_02.png" width="500" height="300" style="max-width: 100%;">
  <img src="/Img/Img_03.png" width="500" height="300" style="max-width: 100%;">
@@ -110,17 +98,17 @@
 	<li>套用第三方登入套件（FB）</li>
 	<li>透過GMAIL發送認證信（註冊）、（重設密碼）</li>
 </ul>
-<h1 dir="auto">
+<h3 dir="auto">
 	查詢公開股票資訊
-</h1>
+</h3>
 <img src="/Img/Img_04.png" width="500" height="300" style="max-width: 100%;">
 	<ul>
 	<li>使用Ajax & Partial View 完成查詢</li>
 	<li>串接證券交易所 OpenAPI 查詢每日本益比、殖利率及股價淨值比</li>	
 	</ul>
-<h1 dir="auto">
+<h3 dir="auto">
 	Excel匯入/匯出
-	</h1>
+	</h3>
 	<img src="/Img/Img_05.png" width="500" height="300" style="max-width: 100%;">
 	<img src="/Img/Img_06.png" width="500" height="300" style="max-width: 100%;">
 	<ul>
@@ -129,14 +117,6 @@
 	<li>使用套件NPOI讀寫EXCEL</li>
 	<li>使用套件Pagedlist做Grid分頁</li>
 	</ul>
-<hr>
-<h1 dir="auto">
-預計撰寫功能
-</h1>
-<ul>
-	<li>首頁備忘錄撰寫</li>
-	<li><del>Site Map功能</del></li>
-	<li>手機網頁排版</li>
-</ul>
+
 
 
