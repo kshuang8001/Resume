@@ -57,6 +57,12 @@
 			<td></td>
 			<td></td>
 		</tr>	
+		<tr>
+			<td>Bootstrap 3</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
 	</table>
 </ul>
 <hr>
@@ -81,7 +87,6 @@
 <h1 dir="auto">
 	WIP系統
 	</h1>
-	<img src="/Img/Img_09.png" width="500" height="300" style="max-width: 100%;">
 	<ul>
 	<li>透過Windows Service每日定時進行更新</li>
 	<li>透過Power BI呈現各廠區製令當前久滯狀況</li>
