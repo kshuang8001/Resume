@@ -69,27 +69,42 @@
 <h1 dir="auto">
 	MES系統
 	</h1>
+	<img src="/Img/CMM05.png" width="500" height="300" style="max-width: 100%;">
+	<img src="/Img/QCR05.png" width="500" height="300" style="max-width: 100%;">
 	<ul>
 	<li>使用ASP.NET MVC 5與C#開發，前端使用Javascript、Jquery與Bootstrp 3</li>
-	<li>利用GIT做版控</li>
-	<li>透過Windows Service定時進行轉檔程式，網站只須檢視產出報告即可降低使用效能</li>
+	<li>利用GIT做版本控制</li>
+	<li>透過Windows Service定時進行轉檔程式</li>
+	<li>開發儀器校正系統，每日依照設定規則發出校正通知信通知負責人員，依照當前儀器校正日推算隔年計劃表與預算表</li>
+	<li>開發週期性驗證系統，每日依照設定規則發出加工通知信通知負責人員</li>
 	</ul>
 <hr>
 <h1 dir="auto">
 	KPI系統
 	</h1>
+	<img src="/Img/KPI.png" width="500" height="300" style="max-width: 100%;">
 	<ul>
 	<li>透過Windows Service每日定時進行更新</li>
 	<li>透過Power BI呈現各部門KPI績效報表</li>
-	<li>使用者透過Google表單回報部門指標</li>
+	<li>使用者透過Google表單每月(季)回報部門績效指標供管理層檢視</li>
 	</ul>
 <hr>
 <h1 dir="auto">
 	WIP系統
-	</h1>
+</h1>
+<img src="/Img/wip.png" width="500" height="300" style="max-width: 100%;">
+<ul>
+	<li>透過Windows Service每日定時進行更新</li>
+	<li>透過Power BI呈現各廠區組別製令當前久滯狀況</li>
+	</ul>
+<hr>
+<h1 dir="auto">
+	人員出勤績效系統
+</h1>
+	<img src="/Img/APPLE.png" width="500" height="300" style="max-width: 100%;" >
 	<ul>
 	<li>透過Windows Service每日定時進行更新</li>
-	<li>透過Power BI呈現各廠區製令當前久滯狀況</li>
+	<li>透過Power BI呈現各廠區組別人員每日出勤績效狀況</li>
 	</ul>
 <hr>
 <h1 dir="auto">Side Project
