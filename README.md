@@ -139,8 +139,8 @@
 	<h3 dir="auto">
 	線上租書系統
 	</h3>
-	<img src="/Img/book1.png" width="500" height="300" style="max-width: 100%;">
-	<img src="/Img/book2.png" width="500" height="300" style="max-width: 100%;">
+	<img src="/Img/book1.png" width="300" height="500" style="max-width: 100%;">
+	<img src="/Img/book2.png" width="300" height="500" style="max-width: 100%;">
 	<ul>
 	<li>使用ASP.NET MVC與C#開發，前端使用Javascript、jquery與Bootstrp 3</li>
 	<li>功能包含租借書模組、會員管理模組、書籍管理模組</li>
