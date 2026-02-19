@@ -72,11 +72,11 @@
 	<img src="/Img/CMM05.png" width="500" height="300" style="max-width: 100%;">
 	<img src="/Img/QCR05.png" width="500" height="300" style="max-width: 100%;">
 	<ul>
-	<li>使用ASP.NET MVC 5與C#開發，前端使用Javascript、Jquery與Bootstrp 3</li>
+	<li>使用ASP.NET MVC 5與C#開發，前端使用Javascript、jquery與Bootstrp 3</li>
 	<li>利用GIT做版本控制</li>
-	<li>透過Windows Service定時進行轉檔程式</li>
-	<li>開發儀器校正系統，每日依照設定規則發出校正通知信通知負責人員，依照當前儀器校正日推算隔年計劃表與預算表</li>
-	<li>開發週期性驗證系統，每日依照設定規則發出加工通知信通知負責人員</li>
+	<li>透過Windows Service定時進行CMM測量資料解析與轉檔功能，自動上傳至系統</li>
+	<li>開發儀器校正管理模組與週期性驗證模組，每日依照設定規則發出校正通知信通知負責人員，依照當前儀器校正日推算隔年計劃表與預算表</li>
+	<li>系統開發符合ISO27001存取權限，實作系統日誌及資料追蹤功能，且定期進行資料備份</li>
 	</ul>
 <hr>
 <h1 dir="auto">
@@ -94,8 +94,8 @@
 </h1>
 <img src="/Img/wip.png" width="500" height="300" style="max-width: 100%;">
 <ul>
-	<li>透過Windows Service每日定時進行更新</li>
-	<li>透過Power BI呈現各廠區組別製令當前久滯狀況</li>
+	<li>透過Windows Service每日定時查詢鼎新ERP當前製令狀況進行更新</li>
+	<li>Power BI連接資料庫呈現各廠區組別製令當前久滯狀況</li>
 	</ul>
 <hr>
 <h1 dir="auto">
@@ -103,8 +103,8 @@
 </h1>
 	<img src="/Img/APPLE.png" width="500" height="300" style="max-width: 100%;" >
 	<ul>
-	<li>透過Windows Service每日定時進行更新</li>
-	<li>透過Power BI呈現各廠區組別人員每日出勤績效狀況</li>
+	<li>透過Windows Service每日定時查詢鼎新ERP製令人員報工狀況進行更新</li>
+	<li>Power BI連接資料庫呈現各廠區組別人員每日出勤績效狀況</li>
 	</ul>
 <hr>
 <h1 dir="auto">Side Project
