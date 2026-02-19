@@ -72,7 +72,7 @@
 	<img src="/Img/CMM05.png" width="500" height="300" style="max-width: 100%;">
 	<img src="/Img/QCR05.png" width="500" height="300" style="max-width: 100%;">
 	<ul>
-	<li>使用ASP.NET MVC 5與C#開發，前端使用Javascript、jquery與Bootstrp 3</li>
+	<li>使用ASP.NET MVC與C#開發，前端使用Javascript、jquery與Bootstrp 3</li>
 	<li>利用GIT做版本控制</li>
 	<li>透過Windows Service定時進行CMM測量資料解析與轉檔功能，自動上傳至系統</li>
 	<li>開發儀器校正管理模組與週期性驗證模組，每日依照設定規則發出校正通知信通知負責人員，依照當前儀器校正日推算隔年計劃表與預算表</li>
@@ -133,9 +133,17 @@
 	<img src="/Img/Img_06.png" width="500" height="300" style="max-width: 100%;">
 	<ul>
 	<li>使用映射（reflection）取得Entity Framework資料表名稱</li>
-	<li>使用TSQL 回寫資料表</li>
 	<li>使用套件NPOI讀寫EXCEL</li>
 	<li>使用套件Pagedlist做Grid分頁</li>
+	</ul>
+	<h3 dir="auto">
+	線上租書系統
+	</h3>
+	<img src="/Img/book1.png" width="500" height="300" style="max-width: 100%;">
+	<img src="/Img/book2.png" width="500" height="300" style="max-width: 100%;">
+	<ul>
+	<li>使用ASP.NET MVC與C#開發，前端使用Javascript、jquery與Bootstrp 3</li>
+	<li>功能包含租借書模組、會員管理模組、書籍管理模組</li>
 	</ul>
 
 
