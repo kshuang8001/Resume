@@ -126,16 +126,6 @@
 	<li>使用Ajax & Partial View 完成查詢</li>
 	<li>串接證券交易所 OpenAPI 查詢每日本益比、殖利率及股價淨值比</li>	
 	</ul>
-<h3 dir="auto">
-	Excel匯入/匯出
-	</h3>
-	<img src="/Img/Img_05.png" width="500" height="300" style="max-width: 100%;">
-	<img src="/Img/Img_06.png" width="500" height="300" style="max-width: 100%;">
-	<ul>
-	<li>使用映射（reflection）取得Entity Framework資料表名稱</li>
-	<li>使用套件NPOI讀寫EXCEL</li>
-	<li>使用套件Pagedlist做Grid分頁</li>
-	</ul>
 	<h3 dir="auto">
 	線上租書系統
 	</h3>
