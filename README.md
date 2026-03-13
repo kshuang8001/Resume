@@ -36,7 +36,7 @@
 		<tr>
 			<td>Html</td>
 			<td></td>
-			<td>Design Pattern</td>
+			<td></td>
 			<td>FastReport</td>
 		</tr>	
 		<tr>
@@ -119,7 +119,7 @@
 	<li>透過GMAIL發送認證信（註冊）、（重設密碼）</li>
 </ul>
 <h3 dir="auto">
-	查詢公開股票資訊
+	2.查詢公開股票資訊
 </h3>
 <img src="/Img/Img_04.png" width="500" height="300" style="max-width: 100%;">
 	<ul>
@@ -127,7 +127,7 @@
 	<li>串接證券交易所 OpenAPI 查詢每日本益比、殖利率及股價淨值比</li>	
 	</ul>
 	<h3 dir="auto">
-	線上租書系統
+	3.線上租書系統
 	</h3>
 	<img src="/Img/book1.png" width="300" height="500" style="max-width: 100%;">
 	<img src="/Img/book2.png" width="300" height="500" style="max-width: 100%;">
