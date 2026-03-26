@@ -107,9 +107,7 @@
 	<li>Power BI連接資料庫呈現各廠區組別人員每日出勤績效狀況</li>
 	</ul>
 <hr>
-<h1 dir="auto">Side Project
 
-</h1>
 <h3>1.會員管理功能</h3>
  <img src="/Img/Img_01.png" width="500" height="300" style="max-width: 100%;">
  <img src="/Img/Img_02.png" width="500" height="300" style="max-width: 100%;">
