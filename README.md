@@ -108,7 +108,7 @@
 	</ul>
 <hr>
 
-<h3>1.會員管理功能</h3>
+<h1>會員管理功能</h3>
  <img src="/Img/Img_01.png" width="500" height="300" style="max-width: 100%;">
  <img src="/Img/Img_02.png" width="500" height="300" style="max-width: 100%;">
  <img src="/Img/Img_03.png" width="500" height="300" style="max-width: 100%;">
@@ -116,17 +116,19 @@
 	<li>套用第三方登入套件（FB）</li>
 	<li>透過GMAIL發送認證信（註冊）、（重設密碼）</li>
 </ul>
-<h3 dir="auto">
-	2.查詢公開股票資訊
-</h3>
+<hr>
+<h1 dir="auto">
+	查詢公開股票資訊
+</h1>
 <img src="/Img/Img_04.png" width="500" height="300" style="max-width: 100%;">
 	<ul>
 	<li>使用Ajax & Partial View 完成查詢</li>
 	<li>串接證券交易所 OpenAPI 查詢每日本益比、殖利率及股價淨值比</li>	
 	</ul>
-	<h3 dir="auto">
-	3.線上租書系統
-	</h3>
+	<hr>
+	<h1 dir="auto">
+	線上租書系統
+	</h1>
 	<img src="/Img/book1.png" width="300" height="500" style="max-width: 100%;">
 	<img src="/Img/book2.png" width="300" height="500" style="max-width: 100%;">
 	<ul>
